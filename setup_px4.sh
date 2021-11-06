@@ -5,12 +5,14 @@ BUILD_PX4="true"
 echo -e "\e[1;33m NOTE: must run this script in the px4 setup directory \e[0m"
 sleep 1
 echo -e "\e[1;33m Input PATH to install PX4 firmware: \e[0m"
-read -p "(e.g., /home/USERNAME/ros/px4): " -r PATHNAME
+read -p "(e.g., /home/USERNAME/ros/px4/.): " -r PATHNAME
 PX4_SRC=$(dirname "$PATHNAME")
 echo
 echo -e "\e[1;33m Your path: \e[0m" ${PX4_SRC}
 read -p "Sure? (Y/N): " confirm && [[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || exit 1
 
+sleep 0.5
+echo -e "\e[1;33m NOTE: If have issues related to python tool, let install recommended packages or use conda base environment \e[0m"
 ####################################### Setup PX4 v1.10.1 #######################################
 if [ "$BUILD_PX4" != "false" ]; then
 
