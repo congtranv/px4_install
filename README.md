@@ -33,4 +33,4 @@ it needs root credentials to perform some command, please type your password
 
 and it will do itself until done 
 
-**NOTE** if have issues related to python tool, let install recommended packages or use conda base environment
+**NOTE** if have issues related to python tool, let install recommended packages or use virtual python3 environment (conda base environment)

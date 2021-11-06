@@ -12,7 +12,7 @@ echo -e "\e[1;33m Your path: \e[0m" ${PX4_SRC}
 read -p "Sure? (Y/N): " confirm && [[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || exit 1
 
 sleep 0.5
-echo -e "\e[1;33m NOTE: If have issues related to python tool, let install recommended packages or use conda base environment \e[0m"
+echo -e "\e[1;33m NOTE: If have issues related to python tool, let install recommended packages or use virtual python3 environment (conda base environment) \e[0m"
 ####################################### Setup PX4 v1.10.1 #######################################
 if [ "$BUILD_PX4" != "false" ]; then
 
