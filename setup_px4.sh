@@ -106,7 +106,7 @@ if [ "$BUILD_PX4" != "false" ]; then
     # #define HAS_GYRO TRUE needs to be replaced by #define HAS_GYRO true
     sed -i 's/#define HAS_GYRO.*/#define HAS_GYRO true/' ${PX4_SRC}/Firmware/Tools/sitl_gazebo/include/gazebo_opticalflow_plugin.h
     cd ${PX4_SRC}/Firmware
-    DONT_RUN=1 make px4_sitl gazebo
+    DONT_RUN=1 make px4_sitl_default gazebo
 
     #Copying this to  .bashrc file
     grep -xF 'source ${PX4_SRC}/Firmware/Tools/setup_gazebo.bash ${PX4_SRC}/Firmware ${PX4_SRC}/Firmware/build/px4_sitl_default' ${HOME}/.bashrc || echo "source ${PX4_SRC}/Firmware/Tools/setup_gazebo.bash ${PX4_SRC}/Firmware ${PX4_SRC}/Firmware/build/px4_sitl_default" >> ${HOME}/.bashrc
